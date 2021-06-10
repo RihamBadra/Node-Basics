@@ -70,6 +70,14 @@ function hello(){
   console.log('hello!')
 }
 
+/**
+ * helping
+ *
+ * @returns {void}
+ */
+ function help(){
+  console.log('helping you!')
+}
 
 /**
  * Exits the application

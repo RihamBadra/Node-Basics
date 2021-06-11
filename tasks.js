@@ -42,7 +42,7 @@ function onDataReceived(text) {
   else if(text === 'help\n'){
     help()
   }
-  else if(text === 'hello\n' || text.startsWith("hello ") || text.startsWith("hello\t") ){
+  else if(text === 'hello\n' || text.startsWith("hello ") ){
     hello(text);
   }
    else if(text.startsWith("list")){
@@ -85,7 +85,7 @@ function remove(text){
  */
 function add(text){
   text = text.trim();
-  list.push(text.substring(4).trim());
+  list.push(text.substring(8).trim());
 }
 
 /*

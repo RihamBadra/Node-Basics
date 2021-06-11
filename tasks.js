@@ -83,9 +83,9 @@ function remove(text){
  *
  * @returns {void}
  */
-function add(text){
-  text = text.trim();
-  list.push(text.substring(8).trim());
+function add(text1){
+  text1 = text1.trim();
+  list.push(text1.substring(4).trim());
 }
 
 /*
@@ -105,9 +105,20 @@ function hello(text){
  */
 function tasks(list){
   for(var i = 0; i < list.length; i++){
-    console.log(i + 1 + ") " + list[i]);
+    console.log(i + ") " + list[i]);
   }
 }
+
+
+/**
+ * edit
+ *
+ * @returns {void}
+ */
+ function edit(){
+  
+}
+
 
 /**
  * prints "unknown command"

@@ -51,11 +51,28 @@ function onDataReceived(text) {
   else if(text.startsWith("add")){
     add(text);
 }
+else if(text === 'rm\n' || text.startsWith("rm") || text.startsWith("remove")){
+  remove(text);
+}
   else{
     unknownCommand(text);
   }
 }
  
+
+function remove(text){
+  text = text.trim();
+  if(text.length == 6 || text.length === 2){
+    list.pop();
+  }
+  else if(text.substring(7) >=list.length){
+    console.log("Sorry but task doesn't exist");
+  }
+  else{
+  list.splice(text.substring(7),1);
+}
+} 
+
 function add(text){
   text = text.trim();
   list.push(text.substring(4).trim());

@@ -44,12 +44,21 @@ function onDataReceived(text) {
   }
   else if(text === 'hello\n' || text.startsWith("hello ") || text.startsWith("hello\t") ){
     hello(text);
-  } else if(text.startsWith("list")){
+  }
+   else if(text.startsWith("list")){
     tasks(list);
   }
+  else if(text.startsWith("add")){
+    add(text);
+}
   else{
     unknownCommand(text);
   }
+}
+ 
+function add(text){
+  text = text.trim();
+  list.push(text.substring(4).trim());
 }
 
 /*

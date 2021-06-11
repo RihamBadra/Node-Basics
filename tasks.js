@@ -106,8 +106,12 @@ function hello(text){
  * @returns {void}
  */
 function tasks(list){
-  for(var i = 0; i < list.length; i++){
-    console.log(i + ") " + list[i]);
+  for(let i = 0 ; i < list.length ; i++){
+    if(list[i][0]==""){
+    console.log(i + ") " + " [] " + list[i][1]);
+  }
+  else
+  console.log(i + ") " + " [✓] " + list[i][1]);
   }
 }
 

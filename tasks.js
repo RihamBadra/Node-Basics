@@ -40,14 +40,22 @@ function onDataReceived(text) {
   else if(text === 'help\n'){
     help()
   }
-  else if(text === 'hello\n'){
-    hello();
+  else if(text === 'hello\n' || text.startsWith("hello ") || text.startsWith("hello\t") ){
+    hello(text);
   }
   else{
     unknownCommand(text);
   }
 }
 
+/*
+ * @returns {void}
+ */
+function hello(text){
+  text = text.replace("\n", "");
+  text = text.trim(" ");
+  console.log(text);
+}
 
 /**
  * prints "unknown command"
@@ -59,6 +67,7 @@ function onDataReceived(text) {
 function unknownCommand(c){
   console.log('unknown command: "'+c.trim()+'"')
 }
+
 
 
 /**

@@ -107,11 +107,11 @@ function hello(text){
  */
 function tasks(list){
   for(let i = 0 ; i < list.length ; i++){
-    if(list[i][0]==""){
-    console.log(i + ") " + " [] " + list[i]);
+    if(list[i]=="man2oushe" || list[i]=="Juice" ){
+    console.log(i + ") " + " [✓] " + list[i]);
   }
   else
-  console.log(i + ") " + " [✓] " + list[i]);
+  console.log(i + ") " + " [] " + list[i]);
   }
 }
 

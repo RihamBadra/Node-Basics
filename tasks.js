@@ -59,7 +59,11 @@ else if(text === 'rm\n' || text.startsWith("rm") || text.startsWith("remove")){
   }
 }
  
-
+/**
+ * remove from list
+ *
+ * @returns {void}
+ */
 function remove(text){
   text = text.trim();
   if(text.length == 6 || text.length === 2){
@@ -73,13 +77,18 @@ function remove(text){
 }
 } 
 
+/**
+ * add task
+ *
+ * @returns {void}
+ */
 function add(text){
   text = text.trim();
   list.push(text.substring(4).trim());
 }
 
 /*
-  prints hello and what you typed next
+ * prints hello and what you typed next to it
  * @returns {void}
  */
 function hello(text){
@@ -88,6 +97,11 @@ function hello(text){
   console.log(text);
 }
 
+/**
+ * show tasks list
+ *
+ * @returns {void}
+ */
 function tasks(list){
   for(var i = 0; i < list.length; i++){
     console.log(i + 1 + ") " + list[i]);

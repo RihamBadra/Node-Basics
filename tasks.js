@@ -51,8 +51,11 @@ function onDataReceived(text) {
   else if(text.startsWith("add")){
     add(text);
 }
-else if(text === 'rm\n' || text.startsWith("rm") || text.startsWith("remove")){
+  else if(text === 'rm\n' || text.startsWith("rm") || text.startsWith("remove")){
   remove(text);
+}
+  else if(text.replace === b){
+  edit(b);
 }
   else{
     unknownCommand(text);
@@ -70,8 +73,7 @@ function remove(text){
     list.pop();
   }
   else if(text.substring(7) >=list.length){
-    console.log("Sorry but number doesn't exist");
-  
+    console.log("Sorry but this index doesn't exist");
   }
   else{
   list.splice(text.substring(7),1);
@@ -115,8 +117,9 @@ function tasks(list){
  *
  * @returns {void}
  */
- function edit(){
-  
+ function edit(b){
+  console.log(b);
+  text3 = text.replace(b , text3)
 }
 
 

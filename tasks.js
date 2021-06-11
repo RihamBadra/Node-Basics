@@ -70,7 +70,8 @@ function remove(text){
     list.pop();
   }
   else if(text.substring(7) >=list.length){
-    console.log("Sorry but task doesn't exist");
+    console.log("Sorry but number doesn't exist");
+  
   }
   else{
   list.splice(text.substring(7),1);

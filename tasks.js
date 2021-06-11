@@ -17,6 +17,8 @@ function startApp(name){
   console.log("--------------------")
 }
 
+var list = ["man2oushe", "Juice"]
+
 
 /**
  * Decides what to do depending on the data that was received
@@ -42,6 +44,8 @@ function onDataReceived(text) {
   }
   else if(text === 'hello\n' || text.startsWith("hello ") || text.startsWith("hello\t") ){
     hello(text);
+  } else if(text.startsWith("list")){
+    tasks(list);
   }
   else{
     unknownCommand(text);
@@ -56,6 +60,12 @@ function hello(text){
   text = text.replace("\n", "");
   text = text.trim(" ");
   console.log(text);
+}
+
+function tasks(list){
+  for(var i = 0; i < list.length; i++){
+    console.log(i + 1 + ") " + list[i]);
+  }
 }
 
 /**

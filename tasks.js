@@ -49,6 +49,7 @@ function onDataReceived(text) {
 }
 
 /*
+  prints hello and what you typed next
  * @returns {void}
  */
 function hello(text){
